@@ -1,0 +1,34 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pop Up Window</title>
+    <link rel="stylesheet" th:href="@{/custom-style.css}">
+</head>
+<body>
+    <form th:action="@{/employees/create}" method="post" >
+    <div>
+        <label for="firstName">First name</label><br/>
+        <input type="text" id="firstName" name="firstName"  required>
+        <!--        th:disabled="${user.isAdmin}"-->
+    </div>
+    <div>
+        <label for="lastName">Last name</label><br/>
+        <input type="text" id="lastName" name="lastName" required>
+    </div>
+    <div>
+        <label for="department">Department</label><br/>
+        <input type="text" id="department" name="department" required>
+    </div>
+    <div>
+        <label for="startYear">Year of start</label><br/>
+        <input type="text" id="startYear" name="startYear" required>
+    </div>
+
+    <br/>
+        <div>
+            <input type="submit" value="SAVE">
+            <button onclick="history.back()">Go Back</button>
+        </div>
+    </form>
+</body>
+</html>
